@@ -17,8 +17,8 @@ def collate_fn(dataset_items: List[dict]):
 
         result_batch["spectrogram"].append(item["spectrogram"].squeeze(0).T)
         result_batch["text_encoded"].append(item["text_encoded"].squeeze(0))
-        result_batch["spectrogram_length"].append(len(item["spectrogram"]))
-        result_batch["text_encoded_length"].append(len(item["text_encoded"]))
+        result_batch["spectrogram_length"].append(item["spectrogram"].shape[2])
+        result_batch["text_encoded_length"].append(item["text_encoded"].shape[1])
         result_batch["text"].append(item["text"])
         result_batch["audio_path"].append(item["audio_path"])
 
