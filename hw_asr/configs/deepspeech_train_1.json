@@ -30,7 +30,7 @@
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-360",
-            "data_dir": "/kaggle/input/librispeech-asr-wav-dataset",
+            "data_dir": "/kaggle/input/librispeech",
             "index_dir": "/kaggle/working/"
           }
         }
@@ -46,7 +46,7 @@
             "part": "dev-clean",
             "max_audio_length": 50.0,
             "max_text_length": 300,
-            "data_dir": "/kaggle/input/librispeech-asr-wav-dataset",
+            "data_dir": "/kaggle/input/librispeech",
             "index_dir": "/kaggle/working/"
           }
         }
