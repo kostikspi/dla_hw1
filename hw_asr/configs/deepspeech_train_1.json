@@ -29,8 +29,7 @@
         {
           "type": "LibrispeechDataset",
           "args": {
-            "part": "train-clean-360",
-            "data_dir":
+            "part": "train-clean-360"
           }
         }
       ]
