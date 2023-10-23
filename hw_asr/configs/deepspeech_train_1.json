@@ -56,7 +56,7 @@
   "optimizer": {
     "type": "AdamW",
     "args": {
-      "lr": 1e-3
+      "lr": 1e-4
     }
   },
   "loss": {
@@ -83,7 +83,7 @@
       "steps_per_epoch": 100,
       "epochs": 150,
       "anneal_strategy": "cos",
-      "max_lr": 1e-2,
+      "max_lr": 1e-4,
       "pct_start": 0.2
     }
   },
