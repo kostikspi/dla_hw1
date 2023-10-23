@@ -43,5 +43,6 @@ class CTCCharTextEncoder(CharTextEncoder):
         assert voc_size == len(self.ind2char)
         hypos: List[Hypothesis] = []
 
+
         raise NotImplementedError
         return sorted(hypos, key=lambda x: x.prob, reverse=True)
