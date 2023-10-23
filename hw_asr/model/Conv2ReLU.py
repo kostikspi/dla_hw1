@@ -19,3 +19,9 @@ class Conv2dReLU(nn.Module):
             nn.ReLU(),
             nn.Dropout(dropout)
         )
+
+    def forward(self, x):
+        res = x
+        x = self.conv1(x)
+        x = self.conv2(x)
+        return res + x
