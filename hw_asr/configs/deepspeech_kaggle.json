@@ -19,7 +19,7 @@
     "args": {
       "n_feats": 128,
       "fc_hidden": 512,
-      "n_gru_layer": 3,
+      "n_gru_layer": 2,
       "n_cnn_layer": 2
     }
   },
