@@ -74,6 +74,16 @@
             "data_dir": "/kaggle/input/librispeech",
             "index_dir": "/kaggle/working/"
           }
+        },
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "train-clean-360",
+            "max_audio_length": 20.0,
+            "max_text_length": 200,
+            "data_dir": "/kaggle/input/librispeech",
+            "index_dir": "/kaggle/working/"
+          }
         }
       ]
     },
