@@ -6,8 +6,6 @@ from hw_asr.augmentations.wave_augmentations.PitchShift import PitchShift
 
 __all__ = [
     "Gain",
-    "AddBackgroundNoise",
     "AddColoredNoise",
-    "ApplyImpulseResponse",
     "PitchShift"
 ]

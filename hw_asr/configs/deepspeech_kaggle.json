@@ -13,20 +13,6 @@
   "augmentations": {
     "wave": [
       {
-        "type": "AddBackgroundNoise",
-        "args": {
-          "sample_rate": 16000,
-          "p": 0.3
-        }
-      },
-      {
-        "type": "ApplyImpulseResponse",
-        "args": {
-          "p": 0.1,
-          "sample_rate": 16000
-        }
-      },
-      {
         "type": "AddColoredNoise",
         "args": {
           "p": 0.3,
