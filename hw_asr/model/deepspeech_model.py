@@ -107,14 +107,10 @@ class DeepSpeechModel(BaseModel):
     def forward(self, spectrogram, *args, **kwargs):
         # batch x features x time
         x = spectrogram.mT.unsqueeze(1)  # batch x channels x time x ft
-        # print(x.shape)
         x = self.conv(x)  # batch x channels x ft x time
-        # print(x.shape)
-        # print(x.transpose(2, 3).flatten(1, 2).shape)
         x = self.gru(x.transpose(2, 3).flatten(1, 2).mT)  # batch x time x ft * channels
         x = self.fc(x)  # batch x time x classes
-        # print(x.shape)
         return x
 
     def transform_input_lengths(self, input_lengths):
-        return input_lengths  # we don't reduce time dimension here
+        return input_lengths
