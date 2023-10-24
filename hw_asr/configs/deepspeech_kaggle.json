@@ -25,7 +25,7 @@
   },
   "data": {
     "train": {
-      "batch_size": 20,
+      "batch_size": 16,
       "num_workers": 4,
       "datasets": [
         {
@@ -41,8 +41,8 @@
       ]
     },
     "val": {
-      "batch_size": 30,
-      "num_workers": 5,
+      "batch_size": 10,
+      "num_workers": 0,
       "datasets": [
         {
           "type": "LibrispeechDataset",
@@ -55,8 +55,8 @@
       ]
     },
     "test-other": {
-      "batch_size": 30,
-      "num_workers": 5,
+      "batch_size": 10,
+      "num_workers": 0,
       "datasets": [
         {
           "type": "LibrispeechDataset",
@@ -69,8 +69,8 @@
       ]
     },
     "test-clean": {
-      "batch_size": 30,
-      "num_workers": 5,
+      "batch_size": 10,
+      "num_workers": 0,
       "datasets": [
         {
           "type": "LibrispeechDataset",
