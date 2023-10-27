@@ -75,7 +75,7 @@ def main(config, out_file):
                     batch["probs"][i], batch["log_probs_length"][i], beam_size=15
                 )[:10]
                 pred_text_beam_search_lm = text_encoder.ctc_lm_beam_search(batch["probs"][i],
-                                                                            batch["log_probs_length"][i], beam_size=100)
+                                                                            batch["log_probs_length"][i], beam_size=15)
                 results.append(
                     {
                         "ground_truth": ground_truth,
