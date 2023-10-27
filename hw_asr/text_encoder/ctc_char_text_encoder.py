@@ -97,4 +97,5 @@ class CTCCharTextEncoder(CharTextEncoder):
         """
         logits = probs[:probs_length].numpy()
         text = self.decoder.decode(logits, beam_size)
+
         return [Hypothesis(text, 1)]
