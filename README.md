@@ -2,11 +2,16 @@
 
 ## Installation guide
 
-< Write your installation guide here >
 
 ```shell
 pip install -r ./requirements.txt
+curl -c ./temp.txt -s -L "https://drive.google.com/uc?export=download&id=1bEzhZ8WbzgIzZYkjTgDdKolXghgrCy3K" > /dev/null
+curl -Lb ./temp.txt "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie.txt`&id=1bEzhZ8WbzgIzZYkjTgDdKolXghgrCy3K" -o "hw_asr/best_model/model_best.pth"
 ```
+
+Google Drive Link: https://drive.google.com/file/d/1bEzhZ8WbzgIzZYkjTgDdKolXghgrCy3K/view?usp=drive_link
+
+Logs: https://wandb.ai/kostiksaiteam/asr_project/table?workspace=user-kostiksai
 
 ## Recommended implementation order
 
