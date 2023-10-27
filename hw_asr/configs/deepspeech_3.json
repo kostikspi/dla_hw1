@@ -1,0 +1,154 @@
+{
+    "name": "deepspeech_config",
+    "n_gpu": 1,
+    "preprocessing": {
+        "sr": 16000,
+        "spectrogram": {
+            "type": "MelSpectrogram",
+            "args": {}
+        },
+        "log_spec": true
+    },
+    "augmentations": {
+        "wave": [
+            {
+                "type": "AddColoredNoise",
+                "args": {
+                    "p": 0.01,
+                    "sample_rate": 16000
+                }
+            },
+            {
+                "type": "Gain",
+                "args": {
+                    "p": 0.1,
+                    "min_gain_in_db": -15.0,
+                    "max_gain_in_db": 5.0
+                }
+            },
+            {
+                "type": "PitchShift",
+                "args": {
+                    "p": 0.1,
+                    "sample_rate": 16000
+                }
+            }
+        ],
+        "spectrogram": []
+    },
+    "arch": {
+        "type": "DeepSpeechModel",
+        "args": {
+            "n_feats": 128,
+            "fc_hidden": 512,
+            "n_gru_layer": 2,
+            "n_cnn_layer": 2
+        }
+    },
+    "data": {
+        "train": {
+            "batch_size": 16,
+            "num_workers": 4,
+            "datasets": [
+                {
+                    "type": "LibrispeechDataset",
+                    "args": {
+                        "part": "train-clean-360",
+                        "max_audio_length": 20.0,
+                        "max_text_length": 200,
+                        "data_dir": "/kaggle/input/librispeech",
+                        "index_dir": "/kaggle/working/"
+                    }
+                }
+            ]
+        },
+        "val": {
+            "batch_size": 10,
+            "num_workers": 2,
+            "datasets": [
+                {
+                    "type": "LibrispeechDataset",
+                    "args": {
+                        "part": "dev-clean",
+                        "data_dir": "/kaggle/input/librispeech",
+                        "index_dir": "/kaggle/working/"
+                    }
+                }
+            ]
+        },
+        "test-other": {
+            "batch_size": 10,
+            "num_workers": 2,
+            "datasets": [
+                {
+                    "type": "LibrispeechDataset",
+                    "args": {
+                        "part": "test-other",
+                        "data_dir": "/kaggle/input/librispeech",
+                        "index_dir": "/kaggle/working/"
+                    }
+                }
+            ]
+        },
+        "test-clean": {
+            "batch_size": 10,
+            "num_workers": 2,
+            "datasets": [
+                {
+                    "type": "LibrispeechDataset",
+                    "args": {
+                        "part": "test-clean",
+                        "data_dir": "/kaggle/input/librispeech",
+                        "index_dir": "/kaggle/working/"
+                    }
+                }
+            ]
+        }
+    },
+    "optimizer": {
+        "type": "AdamW",
+        "args": {
+            "lr": 0.0003
+        }
+    },
+    "loss": {
+        "type": "CTCLoss",
+        "args": {}
+    },
+    "metrics": [
+        {
+            "type": "ArgmaxWERMetric",
+            "args": {
+                "name": "WER (argmax)"
+            }
+        },
+        {
+            "type": "ArgmaxCERMetric",
+            "args": {
+                "name": "CER (argmax)"
+            }
+        }
+    ],
+    "lr_scheduler": {
+        "type": "OneCycleLR",
+        "args": {
+            "steps_per_epoch": 100,
+            "epochs": 400,
+            "anneal_strategy": "cos",
+            "max_lr": 0.0003,
+            "pct_start": 0.2
+        }
+    },
+    "trainer": {
+        "epochs": 400,
+        "save_dir": "saved/",
+        "save_period": 5,
+        "verbosity": 2,
+        "monitor": "min val_loss",
+        "early_stop": 100,
+        "visualize": "wandb",
+        "wandb_project": "asr_project",
+        "len_epoch": 100,
+        "grad_norm_clip": 10
+    }
+}

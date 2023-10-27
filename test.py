@@ -11,6 +11,7 @@ from hw_asr.trainer import Trainer
 from hw_asr.utils import ROOT_PATH
 from hw_asr.utils.object_loading import get_dataloaders
 from hw_asr.utils.parse_config import ConfigParser
+from hw_asr.metric.utils import calc_wer, calc_cer
 
 DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 
@@ -45,6 +46,12 @@ def main(config, out_file):
     results = []
 
     with torch.no_grad():
+        wer_argmax = []
+        cer_argmax = []
+        wer_beamsearch = []
+        cer_beamsearch = []
+        wer_lm = []
+        cer_lm = []
         for batch_num, batch in enumerate(tqdm(dataloaders["test"])):
             batch = Trainer.move_batch_to_device(batch, device)
             output = model(**batch)
@@ -58,18 +65,43 @@ def main(config, out_file):
             )
             batch["probs"] = batch["log_probs"].exp().cpu()
             batch["argmax"] = batch["probs"].argmax(-1)
+
             for i in range(len(batch["text"])):
                 argmax = batch["argmax"][i]
                 argmax = argmax[: int(batch["log_probs_length"][i])]
+                ground_truth = batch["text"][i].strip().lower()
+                pred_text_argmax = text_encoder.ctc_decode(argmax.cpu().numpy()),
+                pred_text_beam_search = text_encoder.ctc_beam_search(
+                    batch["probs"][i], batch["log_probs_length"][i], beam_size=15
+                )[:10]
+                pred_text_beam_search_lm = text_encoder.ctc_lm_beam_search(batch["probs"][i],
+                                                                            batch["log_probs_length"][i], beam_size=100)
                 results.append(
                     {
-                        "ground_trurh": batch["text"][i],
-                        "pred_text_argmax": text_encoder.ctc_decode(argmax.cpu().numpy()),
-                        "pred_text_beam_search": text_encoder.ctc_beam_search(
-                            batch["probs"][i], batch["log_probs_length"][i], beam_size=100
-                        )[:10],
+                        "ground_truth": ground_truth,
+                        "pred_text_argmax": pred_text_argmax,
+                        "pred_text_beam_search": pred_text_beam_search,
+                        "pred_text_beam_search_lm": pred_text_beam_search_lm
                     }
                 )
+                wer_argmax.append(calc_wer(ground_truth, pred_text_argmax[0]))
+                cer_argmax.append(calc_cer(ground_truth, pred_text_argmax[0]))
+                wer_beamsearch.append(calc_wer(ground_truth, pred_text_beam_search[0].text))
+                cer_beamsearch.append(calc_cer(ground_truth, pred_text_beam_search[0].text))
+                wer_lm.append(calc_wer(ground_truth, pred_text_beam_search_lm[0].text))
+                cer_lm.append(calc_cer(ground_truth, pred_text_beam_search_lm[0].text))
+
+    results.append(
+        {
+            "wer_argmax": sum(wer_argmax) / len(wer_argmax),
+            "cer_argmax": sum(cer_argmax) / len(cer_argmax),
+            "wer_beamsearch": sum(wer_beamsearch) / len(wer_beamsearch),
+            "cer_beamsearch": sum(cer_beamsearch) / len(cer_beamsearch),
+            "wer_lm": sum(wer_lm) / len(wer_lm),
+            "cer_lm": sum(cer_lm) / len(cer_lm)
+        }
+    )
+
     with Path(out_file).open("w") as f:
         json.dump(results, f, indent=2)
 
@@ -166,7 +198,7 @@ if __name__ == "__main__":
         }
 
     assert config.config.get("data", {}).get("test", None) is not None
-    config["data"]["test"]["batch_size"] = args.batch_size
+    config["data"]["test"]["batch_size"] = 5
     config["data"]["test"]["n_jobs"] = args.jobs
 
     main(config, args.output)

@@ -1,0 +1,280 @@
+[
+  {
+    "ground_truth": "i do not think there shone so great a light under the lids of venus when transfixed by her own son beyond his usual custom",
+    "pred_text_argmax": [
+      "i do not think their showne so greadt alight under the lids of venuus wen trans ficxs by her own son beyond his usual custom"
+    ],
+    "pred_text_beam_search": [
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficx by her own son beyond his usuual cuustm",
+        3.566938601911633e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyond is usual cuustm",
+        3.5383105278289504e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficx by her own son beyond his usuual cuustom",
+        3.473369023479776e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyond is usual cuustom",
+        3.445491934239332e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyondhisusuual custoam",
+        1.7747199228280104e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyondhisusuual custm",
+        1.289264865591054e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyondhisusuual custom",
+        1.2554442750443853e-74
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficx by her own son beyond his usuual cuustme",
+        7.644542112866527e-75
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficxs by her on son beyond is usual cuustme",
+        7.583187393214766e-75
+      ],
+      [
+        "id do not thinke theire shone so greadtd aliht under theleds of venus wen trans ficx by her own son beyond his usuual cuustome",
+        7.444006958596657e-75
+      ]
+    ],
+    "pred_text_beam_search_lm": [
+      [
+        "i do not think their showne so great a light under the lids of venus wen trans fics by her own son beyond his usual custom",
+        1
+      ]
+    ]
+  },
+  {
+    "ground_truth": "all waters that on earth most limpid are would seem to have within themselves some mixture compared with that which nothing doth conceal",
+    "pred_text_argmax": [
+      "all waters that un earth most limbid are would seeme to have within themselves som mixture compared with that which nothing doth conceal"
+    ],
+    "pred_text_beam_search": [
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat which nohing doth concial",
+        1.3176934152177908e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat which nohing doth conceeal",
+        1.291058768832294e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat wich nothing doth concial",
+        1.279260285549075e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat wich nothing doth conceeal",
+        1.2534024912039642e-111
+      ],
+      [
+        "oll waters tot an earsh most limbid are would seeme ta have within themselvve som mixture compared with that which nothing doth conceal",
+        1.1588324168336849e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat which nohing doth conseal",
+        1.1003273127752445e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat wich nothing doth conseal",
+        1.0682340945793177e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvve som mixture compared with that wich nothing dot conceal",
+        1.0590026502339973e-111
+      ],
+      [
+        "oll waters tot an earsh most limbid are would seeme ta have within themselvve som mixture compared with that which nothing doth conseal",
+        1.0484271329659902e-111
+      ],
+      [
+        "oll waters tot an oearsh most limbit ar would seem to have within themselvves som mixture comparedt with hat which nohing doth conseale",
+        2.3568992260425807e-112
+      ]
+    ],
+    "pred_text_beam_search_lm": [
+      [
+        "all waters that un earth most limbit are would seeme to have within themselves som mixture compared with that which nothing doth concealr",
+        1
+      ]
+    ]
+  },
+  {
+    "ground_truth": "ye are new comers and because i smile began she peradventure in this place elect to human nature for its nest",
+    "pred_text_argmax": [
+      "ye i knew comers and because i smile becanche peradventure in this place alect to human nature for its nust"
+    ],
+    "pred_text_beam_search": [
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its nust",
+        3.3485599607048576e-79
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its nest",
+        1.7789885904433684e-79
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its nast",
+        8.109359739438677e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its knust",
+        7.063509957639408e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its knest",
+        3.752629121348797e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature four its must",
+        3.2316809692538365e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture and thisplace alect to huma nature fur its nust",
+        2.831751624175731e-80
+      ],
+      [
+        "ho i knew coum ers ind because i smile becanche puradvunture and thisplace alect to huma nature fur its nust",
+        2.821351208862359e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture and thisplace alect to huma nature fur it nust",
+        2.812682562865604e-80
+      ],
+      [
+        "ho i knew coamors ad becauuse i smilee becanshe peradvunture an thisplace alect to huma nature fur its nust",
+        2.80775621208012e-80
+      ]
+    ],
+    "pred_text_beam_search_lm": [
+      [
+        "ye ir knew comers and because i smile becanche peradventure in this place alect to human nature for its nustr",
+        1
+      ]
+    ]
+  },
+  {
+    "ground_truth": "thou makest me remember where and what proserpina that moment was when lost her mother her and she herself the spring",
+    "pred_text_argmax": [
+      "thou make ist me remember where and what procipena that moment was when lost her mother heer and she herself the spring"
+    ],
+    "pred_text_beam_search": [
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersolff the spring",
+        3.0555797674613353e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersalf the spring",
+        2.5270681576677154e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersalff the spring",
+        2.2276046537008793e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her nd she hersalff the spring",
+        2.1821020925471435e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersolff the sbring",
+        2.0800862842129606e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her nd she hersalf the sprin",
+        1.4890652567540613e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersolf the sprin",
+        1.4657566902452962e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her nd she hersalf the spring",
+        1.4178979530485404e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersolf the spring",
+        1.3957033792436845e-110
+      ],
+      [
+        "zhou mak ist me remember where ind hat pricipena that momant wass wwhent last hermotherr her hand she hersalff the sprin",
+        1.2759368704671037e-110
+      ]
+    ],
+    "pred_text_beam_search_lm": [
+      [
+        "thou make ist me remember where and what procipena that moment was when lost her mother heer and she herself the spring",
+        1
+      ]
+    ]
+  },
+  {
+    "ground_truth": "but with full ravishment the hours of prime singing received they in the midst of leaves that ever bore a burden to their rhymes",
+    "pred_text_argmax": [
+      "but with full ravishment the hours of prime singing received they in the midst of leaves that everbor aburden t with arrimes"
+    ],
+    "pred_text_beam_search": [
+      [
+        "dut with full revishment the hours of prime stinginng recived they n the midstof leaves thatt everr bor aburdten t with errims",
+        1.579498057211332e-103
+      ],
+      [
+        "dut with full revishment the hours of prime stinginng recived they n the midstof leaves thatt everr bor aburdten t with ar rims",
+        1.5703540027745064e-103
+      ],
+      [
+        "tut withfoll ravishment he ours ov prime sinnginng receivedd they n them midst of leavesd thateverboreaburden t with errims",
+        1.564322998087223e-103
+      ],
+      [
+        "dut with full revishment the hours of prime stinginng recived they n the midstof leaves thatt everr bor aburdten t with errimes",
+        1.1944189781125334e-103
+      ],
+      [
+        "dut with full revishment the hours of prime stinginng recived they n the midstof leaves thatt everr bor aburdten t with ar rimes",
+        1.1875042294008312e-103
+      ],
+      [
+        "tut withfoll ravishment he ours ov prime sinnginng receivedd they n them midst of leavesd thateverboreaburden t with errimes",
+        1.1829435739301326e-103
+      ],
+      [
+        "dut with full revishment the hours of prime stinginng recived they n the midstof leaves thatt everr bor aburden t with errimes",
+        1.449991128300687e-104
+      ],
+      [
+        "tut withfoll ravishment he ours ov prime sinnginng receivedd they n them midst of leavesd thateverboreaburdten t with errimes",
+        1.414600644906895e-104
+      ],
+      [
+        "tut withfoll ravishment he ours ov prime sinnginng receivedd they n them midst of leavesd thatt everr boraberdten t with errimes",
+        1.412288682283623e-104
+      ],
+      [
+        "tut withfoll ravishment he ours ov prime sinnginng received they en the midstof leaves that everr bore aburden t with errames",
+        1.1574348597127898e-104
+      ]
+    ],
+    "pred_text_beam_search_lm": [
+      [
+        "but with full ravishment the hours of prime singing received they in the midst of leaves that ever bor aburden t with arrimes",
+        1
+      ]
+    ]
+  },
+  {
+    "wer_argmax": 0.26035403726708073,
+    "cer_argmax": 0.06958221326012425,
+    "wer_beamsearch": 0.6285859213250518,
+    "cer_beamsearch": 0.15362545788288434,
+    "wer_lm": 0.22871635610766045,
+    "cer_lm": 0.06604285694382724
+  }
+]
