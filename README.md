@@ -13,6 +13,8 @@ Google Drive Link: https://drive.google.com/file/d/1bEzhZ8WbzgIzZYkjTgDdKolXghgr
 
 Logs: https://wandb.ai/kostiksaiteam/asr_project/table?workspace=user-kostiksai
 
+Report: https://api.wandb.ai/links/kostiksaiteam/olgk6eiz
+
 ## Recommended implementation order
 
 You might be a little intimidated by the number of folders and classes. Try to follow this steps to gradually undestand
