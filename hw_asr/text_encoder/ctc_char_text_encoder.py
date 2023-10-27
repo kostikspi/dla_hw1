@@ -95,6 +95,6 @@ class CTCCharTextEncoder(CharTextEncoder):
         """
         Performs beam search with LM and returns a list of pairs (hypothesis, hypothesis probability).
         """
-
-        text = self.decoder.decode(probs.numpy(), beam_size)
+        logits = probs[:probs_length].numpy()
+        text = self.decoder.decode(logits, beam_size)
         return [Hypothesis(text, 1)]
